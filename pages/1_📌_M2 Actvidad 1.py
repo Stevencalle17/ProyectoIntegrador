@@ -1,5 +1,5 @@
 import streamlit as st
-
+import pandas as pd
 # Configuración de la página
 st.set_page_config(   
     page_icon="📌",
@@ -27,3 +27,49 @@ st.markdown("""
 
 st.header("Solución")
 
+# Título de la aplicación
+st.title("Actividad 1 - Creación de DataFrames")
+
+# Descripción de la actividad
+st.write("En esta actividad, aprenderemos a crear y manipular DataFrames en Streamlit usando pandas.")
+
+# Descripción de la actividad
+st.write("En esta sección, crearemos un DataFrame a partir de un diccionario con información sobre libros.")
+
+# Crear un diccionario con datos de libros
+libros = {
+    "Título": ["Cien años de soledad", "El principito", "1984", "Moby Dick"],
+    "Autor": ["Gabriel García Márquez", "Antoine de Saint-Exupéry", "George Orwell", "Herman Melville"],
+    "Año de Publicación": [1967, 1943, 1949, 1851],
+    "Género": ["Realismo mágico", "Infantil", "Distopía", "Aventura"]
+}
+
+# Convertir el diccionario en un DataFrame
+df_libros = pd.DataFrame(libros)
+
+# Mostrar texto descriptivo
+st.write("### DataFrame de Libros")
+
+# Mostrar el DataFrame en la interfaz de Streamlit
+st.dataframe(df_libros)
+
+
+# Descripción de la actividad
+st.write("En esta sección, crearemos un DataFrame a partir de una lista de diccionarios con información sobre ciudades.")
+
+# Crear una lista de diccionarios con datos de ciudades
+ciudades = [
+    {"Nombre": "Buenos Aires", "Población": 2891000, "País": "Argentina"},
+    {"Nombre": "Madrid", "Población": 3266000, "País": "España"},
+    {"Nombre": "Ciudad de México", "Población": 9209944, "País": "México"},
+    {"Nombre": "Bogotá", "Población": 7743955, "País": "Colombia"}
+]
+
+# Convertir la lista de diccionarios en un DataFrame
+df_ciudades = pd.DataFrame(ciudades)
+
+# Mostrar texto descriptivo
+st.write("### Información de Ciudades")
+
+# Mostrar el DataFrame en la interfaz de Streamlit
+st.dataframe(df_ciudades)
