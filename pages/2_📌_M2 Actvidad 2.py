@@ -1,12 +1,7 @@
 import streamlit as st
+import pandas as ad
 
-# Configuración de la página
-st.set_page_config(   
-    page_icon="📌",
-    layout="wide"
-)
-
-st.title("Momento 2 - Actividad 2")
+st.title("Momento 2 - Actividad 1")
 
 st.header("Descripción de la actividad")
 st.markdown("""
@@ -26,4 +21,13 @@ st.markdown("""
 """)
 
 st.header("Solución")
+
+
+df = pd.read_CSV('')
+
+st.dataframe(df)
+
+
+
+
 
