@@ -147,7 +147,7 @@ data = {
 
 # Crear el DataFrame y guardarlo como archivo Excel
 df = pd.DataFrame(data)
-df.to_excel("data.xlsx", index=False, engine="openpyxl")
+df.to_excel("static/data.xlsx", index=False, engine="openpyxl")
 
 df_excel = pd.read_excel("data.xlsx", engine="openpyxl")
 st.dataframe(df_excel)
