@@ -3,7 +3,7 @@ import pandas as pd
 import sqlite3
 import os
 import numpy as np
-import openpyxl
+# import openpyxl
 
 
 # Configuración de la página
